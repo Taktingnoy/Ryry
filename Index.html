@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>សម្រាប់ Nary</title>
+    <style>
+        body { 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            height: 100vh; 
+            margin: 0;
+            font-family: 'Khmer OS Battambang', sans-serif; 
+            background-color: #fff0f5; 
+        }
+        .container { 
+            text-align: center; 
+            background: white; 
+            padding: 40px; 
+            border-radius: 30px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            max-width: 450px;
+            width: 90%;
+        }
+        h1 { color: #d63384; font-size: 22px; margin-bottom: 30px; }
+        img { max-width: 150px; margin-bottom: 20px; }
+        
+        /* ផ្នែកកែប៊ូតុងឱ្យនៅឆ្វេងស្តាំ */
+        .buttons { 
+            display: flex; 
+            justify-content: space-between; /* ធ្វើឱ្យប៊ូតុងនៅសងខាង */
+            align-items: center;
+            width: 100%;
+            height: 60px;
+        }
+        
+        button { 
+            padding: 12px 20px; 
+            font-size: 15px; 
+            cursor: pointer; 
+            border-radius: 15px; 
+            border: none; 
+            transition: all 0.3s;
+            font-weight: bold;
+        }
+        #yesBtn { background-color: #ff4d6d; color: white; }
+        #noBtn { background-color: #343a40; color: white; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTZ4bnh1NmIxcmx0cnhncmgxNmh5Z2R2NDV5bHNxYjltNmEwdzh3ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VbnUQpnihPSIgIXuZv/giphy.gif" alt="Cute Cat">
+        
+        <h1>Nary ត្រូវគ្នាវិញបានអត់? 😼</h1>
+        
+        <div class="buttons">
+            <button id="yesBtn" onclick="accept()">ត្រូវគ្នាវិញក៏បាន😼</button>
+            <button id="noBtn" onmouseover="moveButton()" onclick="moveButton()">យើងមិនខ្ចីត្រូវ🖕🏻</button>
+        </div>
+    </div>
+
+    <script>
+        function moveButton() {
+            // កែសម្រួលឱ្យប៊ូតុងរត់គេចដោយសេរីក្នុងអេក្រង់
+            const btn = document.getElementById('noBtn');
+            btn.style.position = 'fixed';
+            const x = Math.random() * (window.innerWidth - 100);
+            const y = Math.random() * (window.innerHeight - 50);
+            btn.style.left = x + 'px';
+            btn.style.top = y + 'px';
+        }
+
+        function accept() {
+            alert("យេ៎ ទីបំផុតយើងត្រូវគ្នវិញហើយ 🥰💖");
+            window.location.href = "https://youtu.be/TsCXMRVAnVE?si=wdiCZJVMiXETivim"; 
+        }
+    </script>
+</body>
+</html>
